@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title>Template - HTML - Autenticacao - Como se fosse a tela principal</title>
+</head>
+<body>
+    <br>
+    <h1>Template - HTML - Autenticacao - Como se fosse a tela principal</h1>
+    <br>
+    <pre>
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Menu Principal&lt;/title&gt;
+    &lt;/head&gt;    
+    &lt;body&gt;
+    &lt;?php 
+        // Inicia a sessao
+        session_start();
+
+        // Se existir a marcacao de estar logado
+        if(isset($_SESSION["logado"]) == true) {
+            //Se a maracacao esta True
+
+            // Exibe o nome do usuario
+            echo "Ola " . $_SESSION["nome"];
+        } else {
+            // Se a marcacao nao existir ou for falsa
+
+            // Direciona paga a pagina de login com a mensagem de erro
+            header("location:form.php?msg=Primeiro logar");
+        }
+    ?&gt;
+    &lt;p&gt;
+    &lt;a href="logout.php"&gt;sair&lt;/a&gt;
+    &lt;/body&gt;
+&lt;/html&gt;        
+    </pre>
+</body>
+</html>        

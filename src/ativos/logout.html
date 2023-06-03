@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>Template - HTML - Autenticacao - Processamento para logout</title>
+</head>
+<body>
+    <br>
+    <h1>Template - HTML - Autenticacao - Processamento para logout</h1>
+    <br>
+    <pre>
+&lt;?php
+    //Inicia a sessao
+    session_start();
+
+    //Destroi todas as variaveis de sessao
+    session_destroy();
+
+    // Direciona para a pagina de login
+    header("location:form.php");
+?&gt;        
+    </pre>
+</body>
+</html>        

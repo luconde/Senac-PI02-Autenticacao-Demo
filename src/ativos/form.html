@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>Template - HTML - Autenticacao - Formulario</title>
+</head>
+<body>
+    <br>
+    <h1>Template - HTML - Autenticacao - Formulario</h1>
+    <br>
+    <pre>
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Formulario de autenticacao&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;?php 
+            // Se existir uma mensagem em caso de algum erro, deve exibi-la
+            if(isset($_GET["msg"])) {
+                echo "&lt;b&gt;" . $_GET["msg"] . "&lt;/b&gt;";
+            }
+        ?&gt;
+        &lt;p&gt;
+        &lt;form action="auth.php" method="post"&gt;
+            usuario: 
+            &lt;input name="usuario" type="text"&gt;
+            &lt;br&gt;
+            senha
+            &lt;input name="senha" type="password"&gt;
+            &lt;br&gt;
+            &lt;input name="enviar" type="submit" value="Logar"&gt;
+        &lt;/form&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+</body>
+</html>
